@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <form id="calculatorForm" action="index.php" method="POST" class="calculator">
+        <div class="display">
+            <input type="text" id="display" name="display" class="display-text" value="0" readonly>
+            <!-- Hidden inputs to track state -->
+            <input type="hidden" id="currentNumber" name="currentNumber" value="">
+            <input type="hidden" id="lastResult" name="lastResult" value="">
+            <input type="hidden" id="pendingOperator" name="pendingOperator" value="">
+        </div>
+        <div class="buttons">
+            <input type="button" class="btn gray" value="AC" data-action="clear">
+            <input type="button" class="btn gray" value="±" data-action="negate">
+            <input type="button" class="btn gray" value="%" data-action="percent">
+            <input type="button" class="btn orange" value="÷" data-action="operator" data-operator="/">
+            
+            <input type="button" class="btn dark-gray" value="7" data-action="number">
+            <input type="button" class="btn dark-gray" value="8" data-action="number">
+            <input type="button" class="btn dark-gray" value="9" data-action="number">
+            <input type="button" class="btn orange" value="×" data-action="operator" data-operator="*">
+            
+            <input type="button" class="btn dark-gray" value="4" data-action="number">
+            <input type="button" class="btn dark-gray" value="5" data-action="number">
+            <input type="button" class="btn dark-gray" value="6" data-action="number">
+            <input type="button" class="btn orange" value="−" data-action="operator" data-operator="-">
+            
+            <input type="button" class="btn dark-gray" value="1" data-action="number">
+            <input type="button" class="btn dark-gray" value="2" data-action="number">
+            <input type="button" class="btn dark-gray" value="3" data-action="number">
+            <input type="button" class="btn orange" value="+" data-action="operator" data-operator="+">
+            
+            <input type="button" class="btn dark-gray zero" value="0" data-action="number">
+            <input type="button" class="btn dark-gray" value="." data-action="decimal">
+            <input type="button" class="btn orange" value="=" data-action="equals">
+        </div>
+    </form>
+    <script src="index.js"></script>
+</body>
+</html>

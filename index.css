@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #242424;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.calculator {
+    background-color: #000000;
+    border-radius: 40px;
+    padding: 20px 20px 40px 20px;
+    width: 100%;
+    max-width: 320px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.display {
+    background-color: #000000;
+    padding: 40px 20px;
+    text-align: right;
+}
+
+.display-text {
+    color: white;
+    font-size: 80px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: right;
+}
+
+.display-text:focus {
+    outline: none;
+}
+
+@media (max-width: 380px) {
+    input.display-text {
+        font-size: 60px;
+    }
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 10px;
+}
+
+.btn {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: none;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gray {
+    background-color: #A5A5A5;
+    color: #000000;
+}
+
+.orange {
+    background-color: #FF9F0A;
+    color: white;
+}
+
+.dark-gray {
+    background-color: #333333;
+    color: white;
+}
+
+.zero {
+    grid-column: span 2;
+    aspect-ratio: 2;
+    border-radius: 35px;
+    justify-content: flex-start;
+}
+
+@media (max-width: 380px) {
+    .calculator {
+        max-width: 280px;
+        padding: 15px;
+    }
+
+    .display {
+        padding: 30px 15px;
+    }
+
+    .display-text {
+        font-size: 60px;
+    }
+
+    .buttons {
+        gap: 8px;
+    }
+
+    .btn {
+        font-size: 24px;
+    }
+}
